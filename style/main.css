@@ -106,7 +106,6 @@ h2 {
 
 #banner div p {
     color: rgb(63, 63, 63);
-    text-shadow: none;
     font-size: 1.1em;
 }
 
@@ -155,7 +154,6 @@ h2 {
 
 #scrollprompt {
     color: rgb(63, 63, 63);
-    text-shadow: none;
 }
 
 #projects {
@@ -172,4 +170,12 @@ h2 {
 
 .project:nth-child(odd) {
     text-align: right;
+}
+
+.project img {
+    width: 300px;
+    height: 200px;
+    box-shadow: 2px 2px 3px 3px rgb(163, 163, 163);
+    border-radius: 5%;
+    margin: 20px;
 }
