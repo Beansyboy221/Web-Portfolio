@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyatt Rosinski's Portfolio</title>
+    <link rel="stylesheet" href="style/animations.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+    <header>
+        <nav id="contacts">
+            <a href="https://discordapp.com/users/407356600752275467"><img src="images/discord.png" alt="Discord"></a>
+            <a href="https://www.linkedin.com/in/wyatt-rosinski-225492249/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com/Beanthief"><img src="images/github.png" alt="GitHub"></a>
+            <a href="mailto:wyattrosinski@gmail.com"><img src="images/email.png" alt="Email Me"></a>
+        </nav>
+        <nav id="navbar">
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#qualifications">Qualifications</a>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <div>   
+                <h1>Wyatt Rosinski</h1>
+                <p>Full-Stack Developer</p>
+            </div>
+            <img src="images/myface1.jpg" alt="Wyatt Rosinski">
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a full-stack developer with a passion for software development.
+                I am currently pursuing a Bachelor of Science in Computer Science at Norwich University.
+                I have experience with Python, C#, Lua, HTML, CSS, and JavaScript.
+                I am also minoring in Mathematics in the hope of expanding my knowledge of algorithms and data structures.
+            </p>
+            <div>
+                <div id="interests">
+                    <h3>Personal Interests</h3>
+                    <p>
+                        I enjoy playing video games, programming, and learning new things.
+                        I am also interested in computer hardware and software development.
+                        I am always looking for new projects to work on and new things to learn.
+                    </p>
+                </div>
+                <div id="values">
+                    <h3>My Values</h3>
+                    <p>
+                        I am a minimalist at heart and I believe that less is more.
+                        I value simplicity, efficiency, and quality in everything I do.
+                        Organization and communication in a team environment are also very important to me.
+                    </p>
+                </div>
+            </div>
+            <p>- Scroll down to see more -</p>
+        </section>
+        <section id="projects">
+            <h2 class="scrollanim fade">Projects</h2>
+            <div class="project">
+                <div class="scrollanim left">
+                    <h3>Object Detection with OpenCV Python</h3>
+                    <p>
+                        I have briefly experimented with computer vision algorithms for a project in college. 
+                        I wrote a basic program in Python that utilized a pre-trained cascade model 
+                        to detect people and faces in an image or live video feed.
+                    </p>
+                </div>
+                <img class="scrollanim right" src="images/cvproj.jpg" alt="cvprojectimg">
+            </div>
+            <div class="project">
+                <img class="scrollanim left" src="images/luaproj.jpg" alt="luaprojectimg">
+                <div class="scrollanim right">
+                    <h3>Lua Scripting in Garry's Mod</h3>
+                    <p>
+                        Using the built in gLua libraries, I have programmed several addons and scripts. 
+                        Some of the scripts I created include: a crash preventer, ######.
+                    </p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="scrollanim left">
+                    <h3>Touchscreen WinForms Development</h3>
+                    <p>
+                        During my internship at Echo Point Books & Media in Brattleboro, VT,
+                        I developed a touchscreen application in C# using WinForms.
+                        The application was used to document the condition of returned packages and books.
+                        It involved a database connection, barcode scanning, and a usb camera api.
+                    </p>
+                </div>
+                <img class="scrollanim right" src="images/winformsproj.jpg" alt="winformsprojectimg">
+            </div>
+            <div class="project">
+                <img class="scrollanim left" src="images/webdevproj.jpg" alt="webdevprojectimg">
+                <div class="scrollanim right">
+                    <h3>Web Development with HTML, CSS, and JavaScript</h3>
+                    <p>
+                        I have basic experience with web development. 
+                        I have created a few websites using HTML, CSS, and JavaScript including this portfolio.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="anim.js"></script>
+</body>
+</html>
