@@ -34,7 +34,7 @@
 }
 
 .scrollanim.fade.scrolled {
-    animation: fadeIn 1.25s ease-in-out forwards;
+    animation: fadeIn 1.4s ease-in-out forwards;
 }
 
 .scrollanim.left.scrolled {

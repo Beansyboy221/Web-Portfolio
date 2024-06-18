@@ -2,28 +2,25 @@ const scrollElements = document.querySelectorAll(".scrollanim");
 
 const elementInView = (el) => {
     const elementTop = el.getBoundingClientRect().top;
+    const elementBottom = el.getBoundingClientRect().bottom;
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    return elementTop <= windowHeight;
-};
-
-const displayScrollElement = (el) => {
-    el.classList.add('scrolled');
-};
-
-const hideScrollElement = (el) => {
-    el.classList.remove('scrolled');
+    return elementTop <= windowHeight && elementBottom >= 0;
 };
 
 const handleScrollAnimation = () => {
     scrollElements.forEach(el => {
         if (elementInView(el)) {
-            displayScrollElement(el);
+            el.classList.add('scrolled');
         } else {
-            hideScrollElement(el);
+            el.classList.remove('scrolled');
         }
     });
 };
 
 window.addEventListener('scroll', () => {
+    handleScrollAnimation();
+});
+
+window.addEventListener('load', () => {
     handleScrollAnimation();
 });
