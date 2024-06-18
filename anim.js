@@ -1,10 +1,9 @@
 const scrollElements = document.querySelectorAll(".scrollanim");
 
-const elementInView = (el, offsetPercentage = 0) => {
+const elementInView = (el) => {
     const elementTop = el.getBoundingClientRect().top;
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const offset = (windowHeight * offsetPercentage) / 100;
-    return elementTop <= (windowHeight - offset);
+    return elementTop <= windowHeight;
 };
 
 const displayScrollElement = (el) => {
@@ -17,11 +16,11 @@ const hideScrollElement = (el) => {
 
 const handleScrollAnimation = () => {
     scrollElements.forEach(el => {
-        if (elementInView(el, 20)) { // 20% offset
+        if (elementInView(el)) {
             displayScrollElement(el);
         } else {
             hideScrollElement(el);
-        };
+        }
     });
 };
 

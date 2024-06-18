@@ -138,7 +138,6 @@ h2 {
     justify-content: space-evenly;
     align-items: center;
     text-align: left;
-    margin: 50px 0 50px 0;
 }
 
 .project:nth-child(odd) {
