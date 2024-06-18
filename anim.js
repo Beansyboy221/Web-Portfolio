@@ -28,23 +28,3 @@ const handleScrollAnimation = () => {
 window.addEventListener('scroll', () => {
     handleScrollAnimation();
 });
-
-const handleSmallWindows = () => {
-    const mainElement = document.querySelector("main");
-    const navElement = document.querySelector("#navbar");
-    if (window.innerWidth < 1000) {
-        mainElement.classList.add("altmain");
-        navElement.classList.add("altnavbar");
-    } else {
-        mainElement.classList.remove("altmain");
-        navElement.classList.remove("altnavbar");
-    }
-};
-
-window.addEventListener('resize', () => {
-    handleSmallWindows();
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-    handleSmallWindows();
-});
