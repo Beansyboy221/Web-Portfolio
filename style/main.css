@@ -179,3 +179,9 @@ h2 {
     border-radius: 5%;
     margin: 20px;
 }
+
+#qualifications ul {
+    list-style-type: none;
+    margin: 20px;
+    text-align: center;
+}
