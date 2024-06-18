@@ -4,7 +4,7 @@ const elementInView = (el) => {
     const elementTop = el.getBoundingClientRect().top;
     const elementBottom = el.getBoundingClientRect().bottom;
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    return elementTop <= windowHeight && elementBottom >= 0;
+    return elementTop <= windowHeight && elementBottom >= 150;
 };
 
 const handleScrollAnimation = () => {
