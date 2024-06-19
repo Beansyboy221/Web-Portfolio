@@ -75,7 +75,7 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 12vh;
+    margin: 12vh 0 6vh 0;
 }
 
 #banner div {
