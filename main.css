@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(235, 235, 235);
+    text-shadow: 1px 1px rgb(180, 180, 180);
+}
+
+body { /* Aligns main */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Center elements horizontally */
+    width: 100%;     /* Full width of the viewport */
+    position: fixed; /* Fix header on viewport */
+    top: 0;          /* Position at the top of viewport */
+    z-index: 1000;   /* Keep header above other elements */
+    box-shadow: 0 2px 5px 0 rgb(163, 163, 163);
+}
+
+#contacts a img {
+    width: 3.5vh;
+    height: 3.5vh;
+    margin: 2vh 3vmin;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75vmin;
+    padding-top: 8vh; /* Space for fixed header */
+    margin-top: 8vh;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2.0em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 2vh;
+}
+
+h3 {
+    margin: 1vh;
+}
+
+/* Sections */
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#banner {
+    margin-bottom: 15vmin;
+    flex-direction: row;
+}
+
+#about {
+    margin-bottom: 20vmin;
+}
+
+#scrollprompt {
+    margin-bottom: 10vmin;
+    color: rgb(63, 63, 63);
+}
+
+#qualifications {
+    margin-bottom: 5vmin;
+}
+
+#projects {
+    margin-bottom: 5vmin;
+}
+
+/* Content */
+
+#banner-text {
+    margin: 0 2em 0 0;
+    text-align: right;
+}
+
+#banner-text p {
+    color: rgb(63, 63, 63);
+    font-size: 1.1em;
+}
+
+#banner-image img {
+    width: 14vh;
+    height: 14vh;
+    box-shadow: 2px 2px 3px 3px rgb(163, 163, 163);
+    border-radius: 50%;
+}
+
+#about-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#about-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+#about-details div {
+    margin: 2vmin;
+}
+
+#qualifications ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-items: center;
+    gap: 2vmin;
+}
+
+.project img {
+    width: 15vmin;
+    height: 15vmin;
+    box-shadow: 2px 2px 3px 3px rgb(163, 163, 163);
+    border-radius: 5%;
+}
+
+/* Animations */
+
+.hoveranim {
+    transition: opacity 0.2s;
+}
+
+.hoveranim:hover {
+    opacity: 0.5;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.scrollanim {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scrollanim.scrolled.fade {
+    animation: fadeIn 1.4s ease-in-out forwards;
+}
+
+.scrollanim.scrolled.left {
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.scrollanim.scrolled.right {
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+.scrollanim.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scrollanim.visible.hoveranim {
+    transition: opacity 0.2s;
+}
+
+.scrollanim.visible.hoveranim:hover {
+    opacity: 0.5;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    #about-details {
+        flex-direction: column;
+    }
+
+    #scrollprompt {
+        display: none;
+    }
+
+    .project img {
+        width: 20vmin;
+        height: 20vmin;
+    };
+}
